@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🎬 MovieFlix</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for movies..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>🌟 Trending Movies</h2>
+            <div id="trendingMovies" class="movies-grid"></div>
+        </section>
+
+        <section id="searchResults" class="search-section hidden">
+            <h2>Search Results</h2>
+            <div id="moviesGrid" class="movies-grid"></div>
+        </section>
+
+        <div id="loader" class="loader hidden"></div>
+        <div id="errorMsg" class="error hidden"></div>
+    </main>
+
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalPoster" src="" alt="Movie Poster">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span id="modalYear"></span>
+                        <span id="modalRating"></span>
+                        <span id="modalRuntime"></span>
+                    </div>
+                    <p id="modalGenre"></p>
+                    <p id="modalPlot"></p>
+                    <p><strong>Director:</strong> <span id="modalDirector"></span></p>
+                    <p><strong>Cast:</strong> <span id="modalCast"></span></p>
+                    <button id="favoriteBtn" class="favorite-btn">❤️ Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by OMDb API | Created with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
